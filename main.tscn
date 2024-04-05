@@ -1,0 +1,261 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdqqoba0gnmv2"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_droc7"]
+[ext_resource type="FontFile" uid="uid://d2wpmbsdbktn1" path="res://PressStart2P-Regular.ttf" id="2_1i3bu"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_droc7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.223529, 0.223529, 0.223529, 0.129412)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 636.0
+offset_right = 491.0
+offset_bottom = 777.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 504.0
+offset_right = 339.0
+offset_bottom = 535.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+text = "calc"
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(214, 65)
+scale = Vector2(3, 3)
+points = PackedVector2Array(0, 0, 100, 0, 100, 10, 0, 10)
+closed = true
+width = 1.0
+
+[node name="LineEdit_L" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 423.0
+offset_right = 208.0
+offset_bottom = 454.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+text = "100"
+
+[node name="LineEdit_b" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 463.0
+offset_right = 212.0
+offset_bottom = 494.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+text = "10"
+
+[node name="LineEdit_h" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 503.0
+offset_right = 215.0
+offset_bottom = 534.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+text = "10"
+
+[node name="LineEdit_P" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 543.0
+offset_right = 245.0
+offset_bottom = 574.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+text = "1000"
+
+[node name="LineEdit_E" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 583.0
+offset_right = 249.0
+offset_bottom = 614.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+text = "210000"
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(538, 65)
+scale = Vector2(3, 3)
+points = PackedVector2Array(0, 0, 10, 0, 10, 10, 0, 10)
+closed = true
+width = 1.0
+
+[node name="Label_L" type="Label" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 423.0
+offset_right = 110.0
+offset_bottom = 451.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "L"
+
+[node name="Label_Fix" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 37.0
+offset_right = 214.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "Fix"
+
+[node name="Label_L2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "L"
+
+[node name="Label_b" type="Label" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 464.0
+offset_right = 110.0
+offset_bottom = 492.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "b"
+
+[node name="Label_b2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 26.0
+offset_right = 580.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "b"
+
+[node name="Label_h" type="Label" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 504.0
+offset_right = 110.0
+offset_bottom = 532.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "h"
+
+[node name="Label_h2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 70.0
+offset_right = 618.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "h"
+
+[node name="Label_P" type="Label" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 543.0
+offset_right = 110.0
+offset_bottom = 571.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "P"
+
+[node name="Label_P2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 30.0
+offset_right = 536.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "P"
+
+[node name="Label_E" type="Label" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 584.0
+offset_right = 110.0
+offset_bottom = 612.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "E"
+
+[node name="Label_dx" type="Label" parent="."]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 484.0
+offset_right = 395.0
+offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "dx"
+
+[node name="Label_σ" type="Label" parent="."]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 524.0
+offset_right = 395.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+theme_override_font_sizes/font_size = 20
+text = "σ"
+
+[node name="ColorRect2_dx_back" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 483.0
+offset_right = 546.0
+offset_bottom = 503.0
+color = Color(0.490196, 0.490196, 0.490196, 1)
+
+[node name="Label_dx_output" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.392
+anchor_bottom = 0.572
+offset_left = 406.0
+offset_top = 483.0
+offset_right = 407.0
+offset_bottom = 499.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+
+[node name="ColorRect3_σ_back" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 526.0
+offset_right = 546.0
+offset_bottom = 546.0
+color = Color(0.490196, 0.490196, 0.490196, 1)
+
+[node name="Label_σ_output" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.392
+anchor_bottom = 0.572
+offset_left = 406.0
+offset_top = 526.0
+offset_right = 407.0
+offset_bottom = 542.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+
+[node name="Label_title" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_1i3bu")
+text = "beam bend"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

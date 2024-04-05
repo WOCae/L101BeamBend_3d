@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1712272349
+Camera3D_control.gd::GDScript::-1::1712225304::0::1::::<>Camera3D<>::
+export_presets.cfg::TextFile::-1::1712227047::0::1::::<><>::
+icon.svg::CompressedTexture2D::7846773401379344826::1712137523::1712137528::1::::<><>::
+main.gd::GDScript::-1::1712196160::0::1::::<>Control<>::
+main.tscn::PackedScene::2631013785338865917::1712237052::0::1::::<><>::res://main.gd<>uid://d2wpmbsdbktn1::::res://PressStart2P-Regular.ttf
+main_3D.gd::GDScript::-1::1712150848::0::1::::<>Control<>::
+main_3D.tscn::PackedScene::7977441746340455137::1712237052::0::1::::<><>::res://Camera3D_control.gd<>uid://bdqqoba0gnmv2::::res://main.tscn<>uid://d2wpmbsdbktn1::::res://PressStart2P-Regular.ttf
+PressStart2P-Regular.ttf::FontFile::9100709404781736032::1712150848::1712150849::1::::<><>::

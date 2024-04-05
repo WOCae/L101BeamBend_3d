@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlwlkg352f57r"]
+
+[ext_resource type="Script" path="res://Camera3D_control.gd" id="1_wrjbh"]
+[ext_resource type="PackedScene" uid="uid://bdqqoba0gnmv2" path="res://main.tscn" id="2_jdd6y"]
+[ext_resource type="FontFile" uid="uid://d2wpmbsdbktn1" path="res://PressStart2P-Regular.ttf" id="3_284l4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u8n05"]
+sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
+sky_horizon_color = Color(0.692157, 0.727451, 0.77451, 1)
+ground_bottom_color = Color(0.384314, 0.454902, 0.54902, 1)
+ground_horizon_color = Color(0.692157, 0.727451, 0.77451, 1)
+
+[sub_resource type="Sky" id="Sky_fnv8x"]
+sky_material = SubResource("ProceduralSkyMaterial_u8n05")
+
+[sub_resource type="Environment" id="Environment_ejr3p"]
+background_mode = 2
+sky = SubResource("Sky_fnv8x")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="main_3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ejr3p")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+
+[node name="Camera3D_control" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+current = true
+script = ExtResource("1_wrjbh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.0578, 0)
+
+[node name="main" parent="." instance=ExtResource("2_jdd6y")]
+offset_top = 1.0
+offset_bottom = 1.0
+
+[node name="TabContainer" type="TabContainer" parent="."]
+offset_left = 9.0
+offset_top = 42.0
+offset_right = 147.0
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("3_284l4")
+theme_override_font_sizes/font_size = 10
+
+[node name="dSize" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="TabContainer/dSize"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 11)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/dSize"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_284l4")
+theme_override_font_sizes/font_size = 10
+text = "Projection"
+
+[node name="Button" type="Button" parent="TabContainer/dSize"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_284l4")
+theme_override_font_sizes/font_size = 15
+text = "PERSPECTIVE"
+
+[node name="Label2" type="Label" parent="TabContainer/dSize"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_284l4")
+theme_override_font_sizes/font_size = 10
+text = "View Size"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/dSize"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="TabContainer/dSize"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_284l4")
+theme_override_font_sizes/font_size = 10
+text = "View Size2"
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/dSize"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_284l4")
+theme_override_font_sizes/font_size = 15
+text = "0.001"
+
+[node name="tb2" type="VBoxContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="TabContainer/tb2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Light Rot X" type="Label" parent="TabContainer/tb2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_284l4")
+theme_override_font_sizes/font_size = 15
+text = "Light Rot X"
+
+[node name="HSlider2" type="HSlider" parent="TabContainer/tb2"]
+layout_mode = 2
+
+[connection signal="pressed" from="TabContainer/dSize/Button" to="Camera3D_control" method="_on_button_pressed"]
+[connection signal="drag_ended" from="TabContainer/dSize/HSlider" to="Camera3D_control" method="_on_h_slider_drag_ended"]
+[connection signal="text_changed" from="TabContainer/dSize/LineEdit" to="Camera3D_control" method="_on_line_edit_text_changed"]
+[connection signal="drag_ended" from="TabContainer/tb2/HSlider2" to="Camera3D_control" method="_on_h_slider_2_drag_ended"]
